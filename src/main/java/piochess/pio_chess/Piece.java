@@ -33,4 +33,6 @@ public class Piece implements PieceMovement {
             exist=false;
         }
     }
+
+    public String iconPath(){return null;}
 }
