@@ -1,14 +1,19 @@
 package piochess.pio_chess;
 
 public class Piece implements PieceMovement {
+
     private int x;
     private int y;
     public int color;
     boolean exist = false;
 
-    public Piece(int x, int y, int color){
+    /**
+     * @author Laura
+     * basic constructor for object
+     */
+    public Piece(int x, int y, int color) {
         this.setXY(x, y, color);
-        exist=true;
+        exist = true;
     }
 
     @Override
@@ -24,17 +29,32 @@ public class Piece implements PieceMovement {
         return y;
     }
 
+    /**
+     * @author Laura
+     * basic setter for object
+     */
     public void setXY(int x, int y, int color) {
         this.x = x;
         this.y = y;
         this.color = color;
     }
 
-    public void eliminated(int x, int y){
-        if(this.x == x && this.y == y){
-            exist=false;
+    /**
+     * @author Laura
+     * not yet used method to mark figure type as eliminated
+     * TODO: victory-lost marker based on king figure being eliminated
+     */
+    public void eliminated(int x, int y) {
+        if (this.x == x && this.y == y) {
+            exist = false;
         }
     }
 
-    public String iconPath(int color, int offset){return "src/main/resources/piochess/pio_chess/white_bishop.png";}
+    /**
+     * @author Gosia
+     * method created in order to retrieve path to according image-file for each subtype of class Piece
+     */
+    public String iconPath(int color, int offset) {
+        return null;
+    }
 }
