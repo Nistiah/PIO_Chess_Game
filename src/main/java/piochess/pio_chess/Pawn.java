@@ -22,4 +22,14 @@ public class Pawn extends Piece{
         }
         return false;
     }
+
+    @Override
+    public String iconPath(int color) { //0-white, 1-black
+        if (color == 0)
+            return "images/white_pawn.png";
+        else if (color == 1)
+            return "images/black_pawn.png";
+        else
+            return null;
+    }
 }
