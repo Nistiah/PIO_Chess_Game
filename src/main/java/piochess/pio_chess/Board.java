@@ -1,31 +1,43 @@
 package piochess.pio_chess;
 
-
 public class Board {
-    private Piece [][] coordinates = new Piece[9][9];
+
+    private Piece[][] coordinates = new Piece[9][9];
     private PieceSet whites = new PieceSet(0);
     private PieceSet blacks = new PieceSet(1);
 
-    public Piece getBox(int x, int y)
-    {
-        if(x < 0 || x > 7 || y < 1 || y > 8){
+    /**
+     * @author Mateusz
+     * getter method to extract Piece drom coordinates
+     */
+    public Piece getBox(int x, int y) {
+        if (x < 0 || x > 7 || y < 1 || y > 8) {
             System.out.println("Index out of bound");
         }
         return coordinates[x][y];
     }
 
-    public Piece getPiece(int x, int y){
+    public Piece getPiece(int x, int y) {
         return coordinates[x][y];
     }
 
-    public void setPiece(int x, int y, int xFrom, int yFrom){
+    /**
+     * @author Laura
+     * This is a skeleton-version method used to move the figures on coordinates double array from one place into another
+     * TODO: implement possibility check here
+     */
+    public void setPiece(int x, int y, int xFrom, int yFrom) {
         coordinates[x][y] = null;
-        coordinates[x][y]=coordinates[xFrom][yFrom];
-        coordinates[x][y].setXY(x,y, coordinates[xFrom][yFrom].color);
-        coordinates[xFrom][yFrom]=null;
+        coordinates[x][y] = coordinates[xFrom][yFrom];
+        coordinates[x][y].setXY(x, y, coordinates[xFrom][yFrom].color);
+        coordinates[xFrom][yFrom] = null;
     }
 
-    public Board(){
+    /**
+     * @author Mateusz
+     * Board constructor, sets initial values based on PieceSet agreggate-type class
+     */
+    public Board() {
         //whites
         coordinates[whites.pawn1.getX()][whites.pawn1.getY()] = whites.pawn1;
         coordinates[whites.pawn2.getX()][whites.pawn2.getY()] = whites.pawn2;
@@ -39,7 +51,6 @@ public class Board {
         coordinates[whites.rook1.getX()][whites.rook1.getY()] = whites.rook1;
         coordinates[whites.rook2.getX()][whites.rook2.getY()] = whites.rook2;
 
-
         coordinates[whites.knight1.getX()][whites.knight1.getY()] = whites.knight1;
         coordinates[whites.knight2.getX()][whites.knight2.getY()] = whites.knight2;
 
@@ -47,10 +58,7 @@ public class Board {
         coordinates[whites.bishop2.getX()][whites.bishop2.getY()] = whites.bishop2;
 
         coordinates[whites.queen.getX()][whites.queen.getY()] = whites.queen;
-
         coordinates[whites.king.getX()][whites.king.getY()] = whites.king;
-
-
 
         //blacks
         coordinates[blacks.pawn1.getX()][blacks.pawn1.getY()] = blacks.pawn1;
@@ -72,7 +80,6 @@ public class Board {
         coordinates[blacks.bishop2.getX()][blacks.bishop2.getY()] = blacks.bishop2;
 
         coordinates[blacks.queen.getX()][blacks.queen.getY()] = blacks.queen;
-
         coordinates[blacks.king.getX()][blacks.king.getY()] = blacks.king;
     }
 }
