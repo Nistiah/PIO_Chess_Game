@@ -13,6 +13,7 @@
    <center>
       <GridPane fx:id="board" maxHeight="900.0" maxWidth="900.0" minHeight="900.0" minWidth="900.0" prefHeight="900.0" prefWidth="900.0" BorderPane.alignment="CENTER">
         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="0.0" minWidth="0.0" prefWidth="0.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -43,71 +44,71 @@
             <Insets bottom="60.0" left="60.0" right="60.0" top="60.0" />
          </BorderPane.margin>
          <children>
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="4.0" GridPane.rowIndex="5" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="4.0" y="2.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="4.0" y="4.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="4.0" y="6.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="3.0" y="1.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="3.0" y="3.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="3.0" y="5.0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="3.0" y="7.0" GridPane.columnIndex="7" GridPane.rowIndex="6" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="2.0" GridPane.rowIndex="7" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="2.0" y="2.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="2.0" y="4.0" GridPane.columnIndex="4" GridPane.rowIndex="7" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="2.0" y="6.0" GridPane.columnIndex="6" GridPane.rowIndex="7" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="1.0" y="1.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="1.0" y="3.0" GridPane.columnIndex="3" GridPane.rowIndex="8" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="1.0" y="5.0" GridPane.columnIndex="5" GridPane.rowIndex="8" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="1.0" y="7.0" GridPane.columnIndex="7" GridPane.rowIndex="8" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="8.0" GridPane.rowIndex="1" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="8.0" y="1.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="8.0" y="2.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="8.0" y="4.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="8.0" y="6.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="7.0" y="1.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="7.0" y="3.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="7.0" y="5.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="7.0" y="7.0" GridPane.columnIndex="7" GridPane.rowIndex="2" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="6.0" GridPane.rowIndex="3" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="6.0" y="2.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="6.0" y="4.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="6.0" y="6.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="5.0" y="1.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="5.0" y="3.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="5.0" y="5.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
-            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="5.0" y="7.0" GridPane.columnIndex="7" GridPane.rowIndex="4" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="8.0" y="3.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="8.0" y="5.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="8.0" y="7.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="7.0" GridPane.rowIndex="2" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="7.0" y="2.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="7.0" y="4.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="7.0" y="6.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="6.0" y="1.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="6.0" y="3.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="6.0" y="5.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="6.0" y="7.0" GridPane.columnIndex="7" GridPane.rowIndex="3" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="5.0" GridPane.rowIndex="4" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="5.0" y="2.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="5.0" y="4.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="5.0" y="6.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="4.0" y="1.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="4.0" y="3.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="4.0" y="5.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="4.0" y="7.0" GridPane.columnIndex="7" GridPane.rowIndex="5" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="3.0" GridPane.rowIndex="6" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="3.0" y="2.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="3.0" y="4.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="3.0" y="6.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="2.0" y="1.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="2.0" y="3.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="2.0" y="5.0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="2.0" y="7.0" GridPane.columnIndex="7" GridPane.rowIndex="7" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="1.0" GridPane.rowIndex="8" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="1.0" y="2.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="1.0" y="4.0" GridPane.columnIndex="4" GridPane.rowIndex="8" />
-            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="1.0" y="6.0" GridPane.columnIndex="6" GridPane.rowIndex="8" />
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="8" GridPane.rowIndex="1">
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="4.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="4.0" y="2.0" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="4.0" y="4.0" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="4.0" y="6.0" GridPane.columnIndex="7" GridPane.rowIndex="5" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="3.0" y="1.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="3.0" y="3.0" GridPane.columnIndex="4" GridPane.rowIndex="6" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="3.0" y="5.0" GridPane.columnIndex="6" GridPane.rowIndex="6" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="3.0" y="7.0" GridPane.columnIndex="8" GridPane.rowIndex="6" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="2.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="2.0" y="2.0" GridPane.columnIndex="3" GridPane.rowIndex="7" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="2.0" y="4.0" GridPane.columnIndex="5" GridPane.rowIndex="7" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="2.0" y="6.0" GridPane.columnIndex="7" GridPane.rowIndex="7" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="1.0" y="1.0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="1.0" y="3.0" GridPane.columnIndex="4" GridPane.rowIndex="8" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="1.0" y="5.0" GridPane.columnIndex="6" GridPane.rowIndex="8" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="1.0" y="7.0" GridPane.columnIndex="8" GridPane.rowIndex="8" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="8.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="8.0" y="1.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="8.0" y="2.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="8.0" y="4.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="8.0" y="6.0" GridPane.columnIndex="7" GridPane.rowIndex="1" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="7.0" y="1.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="7.0" y="3.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="7.0" y="5.0" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="7.0" y="7.0" GridPane.columnIndex="8" GridPane.rowIndex="2" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="6.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="6.0" y="2.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="6.0" y="4.0" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="6.0" y="6.0" GridPane.columnIndex="7" GridPane.rowIndex="3" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="5.0" y="1.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="5.0" y="3.0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="5.0" y="5.0" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+            <Rectangle arcWidth="5.0" fill="#eeeeee" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="5.0" y="7.0" GridPane.columnIndex="8" GridPane.rowIndex="4" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="8.0" y="3.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="8.0" y="5.0" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="8.0" y="7.0" GridPane.columnIndex="8" GridPane.rowIndex="1" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="7.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="7.0" y="2.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="7.0" y="4.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="7.0" y="6.0" GridPane.columnIndex="7" GridPane.rowIndex="2" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="6.0" y="1.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="6.0" y="3.0" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="6.0" y="5.0" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="6.0" y="7.0" GridPane.columnIndex="8" GridPane.rowIndex="3" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="5.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="5.0" y="2.0" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="5.0" y="4.0" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="5.0" y="6.0" GridPane.columnIndex="7" GridPane.rowIndex="4" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="4.0" y="1.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="4.0" y="3.0" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="4.0" y="5.0" GridPane.columnIndex="6" GridPane.rowIndex="5" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="4.0" y="7.0" GridPane.columnIndex="8" GridPane.rowIndex="5" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="3.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="3.0" y="2.0" GridPane.columnIndex="3" GridPane.rowIndex="6" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="3.0" y="4.0" GridPane.columnIndex="5" GridPane.rowIndex="6" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="3.0" y="6.0" GridPane.columnIndex="7" GridPane.rowIndex="6" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="2.0" y="1.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="2.0" y="3.0" GridPane.columnIndex="4" GridPane.rowIndex="7" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="2.0" y="5.0" GridPane.columnIndex="6" GridPane.rowIndex="7" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="2.0" y="7.0" GridPane.columnIndex="8" GridPane.rowIndex="7" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="1.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="1.0" y="2.0" GridPane.columnIndex="3" GridPane.rowIndex="8" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="1.0" y="4.0" GridPane.columnIndex="5" GridPane.rowIndex="8" />
+            <Rectangle arcWidth="5.0" height="100.0" onMouseClicked="#onMouseClicked" onMouseMoved="#onMouseMoved" smooth="false" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" x="1.0" y="6.0" GridPane.columnIndex="7" GridPane.rowIndex="8" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="8" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets left="5.0" top="-75.0" />
                </GridPane.margin>
@@ -115,7 +116,7 @@
                   <Font size="14.0" />
                </font>
             </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="6" GridPane.rowIndex="3">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="6" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="14.0" />
                </font>
@@ -123,7 +124,7 @@
                   <Insets left="5.0" top="-75.0" />
                </GridPane.margin>
             </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4" GridPane.rowIndex="5">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="4" GridPane.columnIndex="1" GridPane.rowIndex="5">
                <font>
                   <Font size="14.0" />
                </font>
@@ -131,7 +132,7 @@
                   <Insets left="5.0" top="-75.0" />
                </GridPane.margin>
             </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2" GridPane.rowIndex="7">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="2" GridPane.columnIndex="1" GridPane.rowIndex="7">
                <font>
                   <Font size="14.0" />
                </font>
@@ -139,7 +140,7 @@
                   <Insets left="5.0" top="-75.0" />
                </GridPane.margin>
             </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="b" GridPane.columnIndex="1" GridPane.rowIndex="8">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="b" GridPane.columnIndex="2" GridPane.rowIndex="8">
                <font>
                   <Font size="14.0" />
                </font>
@@ -147,7 +148,7 @@
                   <Insets bottom="-75.0" left="85.0" />
                </GridPane.margin>
             </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="d" GridPane.columnIndex="3" GridPane.rowIndex="8">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="d" GridPane.columnIndex="4" GridPane.rowIndex="8">
                <font>
                   <Font size="14.0" />
                </font>
@@ -155,7 +156,7 @@
                   <Insets bottom="-75.0" left="85.0" />
                </GridPane.margin>
             </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="f" GridPane.columnIndex="5" GridPane.rowIndex="8">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="f" GridPane.columnIndex="6" GridPane.rowIndex="8">
                <font>
                   <Font size="14.0" />
                </font>
@@ -163,7 +164,7 @@
                   <Insets bottom="-75.0" left="85.0" />
                </GridPane.margin>
             </Text>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="h" GridPane.columnIndex="7" GridPane.rowIndex="8">
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="h" GridPane.columnIndex="8" GridPane.rowIndex="8">
                <font>
                   <Font size="14.0" />
                </font>
@@ -171,7 +172,7 @@
                   <Insets bottom="-75.0" left="85.0" />
                </GridPane.margin>
             </Text>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="7" GridPane.rowIndex="2">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="7" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font size="14.0" />
                </font>
@@ -179,7 +180,7 @@
                   <Insets left="5.0" top="-75.0" />
                </GridPane.margin>
             </Text>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="5" GridPane.rowIndex="4">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="5" GridPane.columnIndex="1" GridPane.rowIndex="4">
                <font>
                   <Font size="14.0" />
                </font>
@@ -187,7 +188,7 @@
                   <Insets left="5.0" top="-75.0" />
                </GridPane.margin>
             </Text>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" GridPane.rowIndex="6">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="3" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <font>
                   <Font size="14.0" />
                </font>
@@ -195,7 +196,7 @@
                   <Insets left="5.0" top="-75.0" />
                </GridPane.margin>
             </Text>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="1" GridPane.rowIndex="8">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="1" GridPane.columnIndex="1" GridPane.rowIndex="8">
                <font>
                   <Font size="14.0" />
                </font>
@@ -203,7 +204,7 @@
                   <Insets left="5.0" top="-75.0" />
                </GridPane.margin>
             </Text>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="c" GridPane.columnIndex="2" GridPane.rowIndex="8">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="c" GridPane.columnIndex="3" GridPane.rowIndex="8">
                <font>
                   <Font size="14.0" />
                </font>
@@ -211,7 +212,7 @@
                   <Insets bottom="-75.0" left="85.0" />
                </GridPane.margin>
             </Text>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="e" GridPane.columnIndex="4" GridPane.rowIndex="8">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="e" GridPane.columnIndex="5" GridPane.rowIndex="8">
                <font>
                   <Font size="14.0" />
                </font>
@@ -219,7 +220,7 @@
                   <Insets bottom="-75.0" left="85.0" />
                </GridPane.margin>
             </Text>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="g" GridPane.columnIndex="6" GridPane.rowIndex="8">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="g" GridPane.columnIndex="7" GridPane.rowIndex="8">
                <font>
                   <Font size="14.0" />
                </font>
@@ -227,7 +228,7 @@
                   <Insets bottom="-75.0" left="85.0" />
                </GridPane.margin>
             </Text>
-            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="a" GridPane.rowIndex="8">
+            <Text fill="WHITE" strokeType="OUTSIDE" strokeWidth="0.0" text="a" GridPane.columnIndex="1" GridPane.rowIndex="8">
                <font>
                   <Font size="14.0" />
                </font>
