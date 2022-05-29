@@ -2,10 +2,9 @@ package piochess.pio_chess;
 
 
 public class Board {
-    private Piece [][] coordinates = new Piece[8][9];
+    private Piece [][] coordinates = new Piece[9][9];
     private PieceSet whites = new PieceSet(0);
     private PieceSet blacks = new PieceSet(1);
-
 
     public Piece getBox(int x, int y)
     {
@@ -14,6 +13,18 @@ public class Board {
         }
         return coordinates[x][y];
     }
+
+    public Piece getPiece(int x, int y){
+        return coordinates[x][y];
+    }
+
+    public void setPiece(int x, int y, int xFrom, int yFrom){
+        coordinates[x][y] = null;
+        coordinates[x][y]=coordinates[xFrom][yFrom];
+        coordinates[x][y].setXY(x,y, coordinates[xFrom][yFrom].color);
+        coordinates[xFrom][yFrom]=null;
+    }
+
     public Board(){
         //whites
         coordinates[whites.pawn1.getX()][whites.pawn1.getY()] = whites.pawn1;

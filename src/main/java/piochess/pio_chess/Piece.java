@@ -3,10 +3,11 @@ package piochess.pio_chess;
 public class Piece implements PieceMovement {
     private int x;
     private int y;
+    public int color;
     boolean exist = false;
 
-    public Piece(int x, int y){
-        this.setXY(x, y);
+    public Piece(int x, int y, int color){
+        this.setXY(x, y, color);
         exist=true;
     }
 
@@ -23,9 +24,10 @@ public class Piece implements PieceMovement {
         return y;
     }
 
-    public void setXY(int x, int y) {
+    public void setXY(int x, int y, int color) {
         this.x = x;
         this.y = y;
+        this.color = color;
     }
 
     public void eliminated(int x, int y){
@@ -34,5 +36,5 @@ public class Piece implements PieceMovement {
         }
     }
 
-    public String iconPath(int color){return null;}
+    public String iconPath(int color, int offset){return "src/main/resources/piochess/pio_chess/white_bishop.png";}
 }
