@@ -34,5 +34,5 @@ public class Piece implements PieceMovement {
         }
     }
 
-    public String iconPath(){return null;}
+    public String iconPath(int color){return null;}
 }
