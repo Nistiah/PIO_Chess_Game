@@ -3,7 +3,7 @@ package piochess.pio_chess;
 public class Board {
 
     private Piece[][] coordinates = new Piece[9][9];
-    private PieceSet whites = new PieceSet(0);
+    PieceSet whites = new PieceSet(0);
     private PieceSet blacks = new PieceSet(1);
 
     /**
