@@ -12,10 +12,7 @@ public class Rook extends Piece {
      */
     @Override
     public boolean movementPermitted(int xFrom, int yFrom, int xTo, int yTo) {
-        if((xFrom == xTo && yFrom != yTo) || (yFrom == yTo && xFrom != xTo)
-            return true;
-        else
-            return false;
+        return (xFrom == xTo && yFrom != yTo) || (yFrom == yTo && xFrom != xTo);
     }
 
     /**
