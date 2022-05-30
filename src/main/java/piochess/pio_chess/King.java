@@ -12,24 +12,7 @@ public class King extends Piece {
      */
     @Override
     public boolean movementPermitted(int xFrom, int yFrom, int xTo, int yTo) {
-        if (xFrom == xTo + 1 && yFrom == yTo)
-            return true;
-        else if (xFrom == xTo - 1 && yFrom == yTo)
-            return true;
-        else if (xFrom == xTo && yFrom == yTo + 1)
-            return true;
-        else if (xFrom == xTo && yFrom == yTo - 1)
-            return true;
-        else if (xFrom == xTo + 1 && yFrom == yTo + 1)
-            return true;
-        else if (xFrom == xTo + 1 && yFrom == yTo - 1)
-            return true;
-        else if (xFrom == xTo - 1 && yFrom == yTo - 1)
-            return true;
-        else if (xFrom == xTo - 1 && yFrom == yTo + 1)
-            return true;
-        else
-            return false;
+        return (xFrom == xTo + 1 && yFrom == yTo) || (xFrom == xTo - 1 && yFrom == yTo) || (xFrom == xTo && yFrom == yTo + 1) || (xFrom == xTo && yFrom == yTo - 1) || (xFrom == xTo + 1 && yFrom == yTo + 1) || (xFrom == xTo + 1 && yFrom == yTo - 1) || (xFrom == xTo - 1 && yFrom == yTo - 1) || (xFrom == xTo - 1 && yFrom == yTo + 1);
     }
 
     /**

@@ -14,17 +14,16 @@ public class Pawn extends Piece {
     @Override
     public boolean movementPermitted(int xFrom, int yFrom, int xTo, int yTo) {
         if (isFirstMove) {
-            if (xFrom == xTo && yFrom == yTo - 1)
+            if (xFrom == xTo && yFrom == yTo - 1){
                 return true;
-            else if (xFrom == xTo && yFrom == yTo - 2)
-                return true;
-        } else {
-            if (xFrom == xTo && yFrom == yTo - 1)
-                return true;
-            else
-                return false;
+            }
+            else{
+                return xFrom == xTo && yFrom == yTo - 2;
+            }
         }
-        return false;
+        else {
+            return xFrom == xTo && yFrom == yTo - 1;
+        }
     }
 
     /**

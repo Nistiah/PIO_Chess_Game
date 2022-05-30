@@ -11,10 +11,7 @@ public class Bishop extends Piece {
      */
     @Override
     public boolean movementPermitted(int xFrom, int yFrom, int xTo, int yTo) {
-        if (Math.abs(xFrom - xTo) == Math.abs(yFrom - yTo))
-            return true;
-        else
-            return false;
+        return Math.abs(xFrom - xTo) == Math.abs(yFrom - yTo);
     }
 
     /**
