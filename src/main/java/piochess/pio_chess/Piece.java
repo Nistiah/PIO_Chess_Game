@@ -2,9 +2,11 @@ package piochess.pio_chess;
 
 public class Piece implements PieceMovement {
 
+    public static final int BEGIN_INDEX = 19;
     private int x;
     private int y;
     public int color;
+    public String name;
     boolean exist = false;
 
     /**
@@ -55,6 +57,18 @@ public class Piece implements PieceMovement {
      * method created in order to retrieve path to according image-file for each subtype of class Piece
      */
     public String iconPath(int color, int offset) {
-        return null;
+
+        if (color == 0) {
+            if ((this.getX() - offset) % 2 == 0 && (this.getY()) % 2 == 1 || (this.getX() - offset) % 2 == 1 && (this.getY()) % 2 == 0)
+                return "src/main/resources/piochess/pio_chess/white_" + this.getClass().getName().toLowerCase().substring(BEGIN_INDEX) + "_white_bg.png";
+            else
+                return "src/main/resources/piochess/pio_chess/white_" + this.getClass().getName().toLowerCase().substring(BEGIN_INDEX) + "_black_bg.png";
+        } else if (color == 1) {
+            if ((this.getX() - offset) % 2 == 0 && (this.getY()) % 2 == 1 || (this.getX() - offset) % 2 == 1 && (this.getY()) % 2 == 0)
+                return "src/main/resources/piochess/pio_chess/black_" + this.getClass().getName().toLowerCase().substring(BEGIN_INDEX) + "_white_bg.png";
+            else
+                return "src/main/resources/piochess/pio_chess/black_" + this.getClass().getName().toLowerCase().substring(BEGIN_INDEX) + "_black_bg.png";
+        } else
+            return null;
     }
 }
