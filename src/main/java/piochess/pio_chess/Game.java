@@ -134,7 +134,7 @@ public class Game implements Initializable {
         int    y    = Integer.parseInt(ys);
         Piece  temp = boardClass.getBox(x, y);
 
-        System.out.println(temp);
+//        System.out.println(temp);
     }
 
     /**
