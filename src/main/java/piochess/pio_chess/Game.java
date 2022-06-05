@@ -49,8 +49,7 @@ public class Game implements Initializable {
                 try {
                     rectangle = (Rectangle) getNodeByRowColumnIndex(y, x + 1, board);
                     rectangle.setFill(imagePattern);
-                } catch (NullPointerException e) {
-                    continue;
+                } catch (NullPointerException ignored) {
                 }
             }
         }
@@ -65,8 +64,7 @@ public class Game implements Initializable {
                 try {
                     rectangle = (Rectangle) getNodeByRowColumnIndex(y, x + 1, board);
                     rectangle.setFill(imagePattern);
-                } catch (NullPointerException e) {
-                    continue;
+                } catch (NullPointerException ignored) {
                 }
             }
         }
@@ -118,7 +116,7 @@ public class Game implements Initializable {
                 imagePattern = new ImagePattern(image);
                 rectangle    = (Rectangle) getNodeByRowColumnIndex(9 - y, x + 1, board);
                 rectangle.setFill(imagePattern);
-            } catch (NullPointerException e) {}
+            } catch (NullPointerException ignored) {}
 
             moved = false;
         }
@@ -149,13 +147,12 @@ public class Game implements Initializable {
 
         for (Node node : childrens) {
             try {
-                if ((gridPane.getRowIndex(node) == row) && (gridPane.getColumnIndex(node) == column)) {
+                if ((GridPane.getRowIndex(node) == row) && (GridPane.getColumnIndex(node) == column)) {
                     result = node;
 
                     break;
                 }
-            } catch (NullPointerException e) {
-                continue;
+            } catch (NullPointerException ignored) {
             }
         }
 
