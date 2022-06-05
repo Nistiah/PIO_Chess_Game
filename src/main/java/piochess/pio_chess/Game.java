@@ -60,10 +60,6 @@ public class Game implements Initializable {
                 file  = new File(boardClass.getPiece(x, y).iconPath(0, 0));
                 image = new Image(file.toURI().toString());
 
-                if (image == null) {
-                    continue;
-                }
-
                 imagePattern = new ImagePattern(image);
 
                 try {

@@ -1,7 +1,7 @@
 package piochess.pio_chess;
 
 public class PieceSet {
-    public enum color {white, black;}// 0-white, 1-black
+    public enum color {white, black}// 0-white, 1-black
     color      colorNo;
     Piece      pawn1;
     Piece      pawn2;

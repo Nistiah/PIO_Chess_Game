@@ -70,7 +70,6 @@ public class Board {
      * TODO: implement possibility check here
      */
     public void setPiece(int x, int y, int xFrom, int yFrom) {
-        coordinates[x][y] = null;
         coordinates[x][y] = coordinates[xFrom][yFrom];
         coordinates[x][y].setXY(x, y, coordinates[xFrom][yFrom].color);
         coordinates[xFrom][yFrom] = null;
