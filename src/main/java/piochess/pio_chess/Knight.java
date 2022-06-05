@@ -1,8 +1,7 @@
 package piochess.pio_chess;
 
 public class Knight extends Piece {
-
-    public Knight(int x, int y, int color) {
+    public Knight(int x, int y, PieceSet.color color) {
         super(x, y, color);
     }
 
@@ -12,8 +11,13 @@ public class Knight extends Piece {
      */
     @Override
     public boolean movementPermitted(int xFrom, int yFrom, int xTo, int yTo) {
-        return (xFrom == xTo - 2 && yFrom == yTo - 1) || (xFrom == xTo - 2 && yFrom == yTo + 1) || (xFrom == xTo + 2 && yFrom == yTo + 1) || (xFrom == xTo + 2 && yFrom == yTo - 1) || (xFrom == xTo - 1 && yFrom == yTo - 2) || (xFrom == xTo - 1 && yFrom == yTo + 2) || (xFrom == xTo + 1 && yFrom == yTo + 2) || (xFrom == xTo + 1 && yFrom == yTo - 2);
+        return ((xFrom == xTo - 2) && (yFrom == yTo - 1))
+               || ((xFrom == xTo - 2) && (yFrom == yTo + 1))
+               || ((xFrom == xTo + 2) && (yFrom == yTo + 1))
+               || ((xFrom == xTo + 2) && (yFrom == yTo - 1))
+               || ((xFrom == xTo - 1) && (yFrom == yTo - 2))
+               || ((xFrom == xTo - 1) && (yFrom == yTo + 2))
+               || ((xFrom == xTo + 1) && (yFrom == yTo + 2))
+               || ((xFrom == xTo + 1) && (yFrom == yTo - 2));
     }
-
-
 }

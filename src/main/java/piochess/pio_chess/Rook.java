@@ -1,8 +1,7 @@
 package piochess.pio_chess;
 
 public class Rook extends Piece {
-
-    public Rook(int x, int y, int color) {
+    public Rook(int x, int y, PieceSet.color color) {
         super(x, y, color);
     }
 
@@ -12,8 +11,6 @@ public class Rook extends Piece {
      */
     @Override
     public boolean movementPermitted(int xFrom, int yFrom, int xTo, int yTo) {
-        return (xFrom == xTo && yFrom != yTo) || (yFrom == yTo && xFrom != xTo);
+        return ((xFrom == xTo) && (yFrom != yTo)) || ((yFrom == yTo) && (xFrom != xTo));
     }
-
-
 }
