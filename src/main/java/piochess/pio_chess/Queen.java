@@ -1,7 +1,6 @@
 package piochess.pio_chess;
 
 public class Queen extends Piece {
-
     public Queen(int x, int y, int color) {
         super(x, y, color);
     }
@@ -12,16 +11,12 @@ public class Queen extends Piece {
      */
     @Override
     public boolean movementPermitted(int xFrom, int yFrom, int xTo, int yTo) {
-        if (xFrom == xTo){
+        if (xFrom == xTo) {
             return true;
-        }
-        else if (yFrom == yTo){
+        } else if (yFrom == yTo) {
             return true;
-        }
-        else{
+        } else {
             return Math.abs(xFrom - xTo) == Math.abs(yFrom - yTo);
         }
     }
-
-
 }
