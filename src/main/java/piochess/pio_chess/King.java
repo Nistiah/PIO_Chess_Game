@@ -1,7 +1,7 @@
 package piochess.pio_chess;
 
 public class King extends Piece {
-    public King(int x, int y, int color) {
+    public King(int x, int y, PieceSet.color color) {
         super(x, y, color);
     }
 

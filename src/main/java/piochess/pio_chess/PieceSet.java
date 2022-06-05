@@ -1,7 +1,8 @@
 package piochess.pio_chess;
 
 public class PieceSet {
-    public int color;    // 0-white, 1-black
+    public enum color {white, black;}// 0-white, 1-black
+    color      colorNo;
     Piece      pawn1;
     Piece      pawn2;
     Piece      pawn3;
@@ -23,10 +24,10 @@ public class PieceSet {
      * @author Laura
      * Constructor setting aggregate of Pawn objects
      */
-    PieceSet(int backgroundColor) {
-        this.color = backgroundColor;
+    PieceSet(PieceSet.color backgroundColor) {
+        this.colorNo = backgroundColor;
 
-        if (backgroundColor == 0) {
+        if (backgroundColor == color.white) {
             pawn1   = new Pawn(0, 2, backgroundColor);
             pawn2   = new Pawn(1, 2, backgroundColor);
             pawn3   = new Pawn(2, 2, backgroundColor);

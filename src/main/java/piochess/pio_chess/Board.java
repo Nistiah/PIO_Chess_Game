@@ -2,8 +2,8 @@ package piochess.pio_chess;
 
 public class Board {
     private Piece[][] coordinates = new Piece[9][9];
-    PieceSet          whites      = new PieceSet(0);
-    private PieceSet  blacks      = new PieceSet(1);
+    PieceSet          whites      = new PieceSet(PieceSet.color.white);
+    private PieceSet  blacks      = new PieceSet(PieceSet.color.black);
 
     /**
      * @author Mateusz

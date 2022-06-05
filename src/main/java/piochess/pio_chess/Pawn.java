@@ -3,7 +3,7 @@ package piochess.pio_chess;
 public class Pawn extends Piece {
     boolean isFirstMove = true;
 
-    public Pawn(int x, int y, int color) {
+    public Pawn(int x, int y, PieceSet.color color) {
         super(x, y, color);
     }
 

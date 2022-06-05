@@ -117,7 +117,7 @@ public class Game implements Initializable {
             }
 
             try {
-                file         = new File(boardClass.getPiece(x, y).iconPath(boardClass.getPiece(x, y).color % 2, 1));
+                file         = new File(boardClass.getPiece(x, y).iconPath(boardClass.getPiece(x, y).color.ordinal() % 2, 1));
                 image        = new Image(file.toURI().toString());
                 imagePattern = new ImagePattern(image);
                 rectangle    = (Rectangle) getNodeByRowColumnIndex(9 - y, x + 1, board);

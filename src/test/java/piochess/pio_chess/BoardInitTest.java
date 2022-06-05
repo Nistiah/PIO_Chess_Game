@@ -20,7 +20,7 @@ public class BoardInitTest {
     @BeforeEach
     void setUp() {
         board = new Board();
-        whitePawn1 = new Pawn(0,2,0);
+        whitePawn1 = new Pawn(0,2,PieceSet.color.white);
     }
 
     @Test

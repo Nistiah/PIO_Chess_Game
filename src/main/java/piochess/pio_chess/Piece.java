@@ -5,14 +5,14 @@ public class Piece implements PieceMovement {
     boolean                 exist       = false;
     private int             x;
     private int             y;
-    public int              color;
+    public PieceSet.color   color;
     public String           name;
 
     /**
      * @author Laura
      * basic constructor for object
      */
-    public Piece(int x, int y, int color) {
+    public Piece(int x, int y, PieceSet.color color) {
         this.setXY(x, y, color);
         exist = true;
     }
@@ -69,7 +69,7 @@ public class Piece implements PieceMovement {
      * @author Laura
      * basic setter for object
      */
-    public void setXY(int x, int y, int color) {
+    public void setXY(int x, int y, PieceSet.color color) {
         this.x     = x;
         this.y     = y;
         this.color = color;
