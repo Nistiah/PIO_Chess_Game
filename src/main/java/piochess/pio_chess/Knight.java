@@ -15,25 +15,5 @@ public class Knight extends Piece {
         return (xFrom == xTo - 2 && yFrom == yTo - 1) || (xFrom == xTo - 2 && yFrom == yTo + 1) || (xFrom == xTo + 2 && yFrom == yTo + 1) || (xFrom == xTo + 2 && yFrom == yTo - 1) || (xFrom == xTo - 1 && yFrom == yTo - 2) || (xFrom == xTo - 1 && yFrom == yTo + 2) || (xFrom == xTo + 1 && yFrom == yTo + 2) || (xFrom == xTo + 1 && yFrom == yTo - 2);
     }
 
-    /**
-     * @author Gosia
-     * method to retrieve path to figure image
-     */
-    @Override
-    public String iconPath(int color, int offset) { //0-white, 1-black
-        if (color == 0) {
-            if ((this.getX() - offset) % 2 == 0 && (this.getY()) % 2 == 1 || (this.getX() - offset) % 2 == 1 && (this.getY()) % 2 == 0)
-                return "src/main/resources/piochess/pio_chess/white_knight_white_bg.png";
-            else
-                return "src/main/resources/piochess/pio_chess/white_knight_black_bg.png";
 
-        } else if (color == 1) {
-            if ((this.getX() - offset) % 2 == 0 && (this.getY()) % 2 == 1 || (this.getX() - offset) % 2 == 1 && (this.getY()) % 2 == 0)
-                return "src/main/resources/piochess/pio_chess/black_knight_white_bg.png";
-            else
-                return "src/main/resources/piochess/pio_chess/black_knight_black_bg.png";
-
-        } else
-            return null;
-    }
 }
