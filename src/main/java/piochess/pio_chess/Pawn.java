@@ -14,13 +14,13 @@ public class Pawn extends Piece {
     @Override
     public boolean movementPermitted(int xFrom, int yFrom, int xTo, int yTo) {
         if (isFirstMove) {
-            if (((xFrom == xTo) && (yFrom == yTo - 1) && (this.color == PieceSet.color.white))|| (((xFrom == xTo) && (yFrom == yTo + 1)) && this.color == PieceSet.color.black)) {
+            if (((xFrom == xTo) && (yFrom + 1 == yTo) && (this.color == PieceSet.color.white))|| (((xFrom == xTo) && (yFrom  - 1 == yTo)) && this.color == PieceSet.color.black)) {
                 return true;
-            } else {
-                return (xFrom == xTo) && (yFrom == yTo - 2);
             }
-        } else {
-            return (xFrom == xTo) && (yFrom == yTo - 1);
+            else {
+                return (xFrom == xTo) && (yFrom + 2 == yTo);
+            }
         }
+        else return ((xFrom == xTo) && (yFrom + 1 == yTo) && (this.color == PieceSet.color.white)) || (((xFrom == xTo) && (yFrom - 1 == yTo)) && this.color == PieceSet.color.black);
     }
 }
