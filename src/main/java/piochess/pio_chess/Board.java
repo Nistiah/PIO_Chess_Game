@@ -73,9 +73,20 @@ public class Board {
      * This is a skeleton-version method used to move the figures on boardCoordinates double array from one place into another
      * TODO: implement possibility check here
      */
-    public void setPiece(int x, int y, int xFrom, int yFrom) {
-        boardCoordinates[x][y] = boardCoordinates[xFrom][yFrom];
-        boardCoordinates[x][y].setXY(x, y, boardCoordinates[xFrom][yFrom].color);
-        boardCoordinates[xFrom][yFrom] = null;
+    public boolean setPiece(int x, int y, int xFrom, int yFrom) {
+        Piece pieceSrc = getPiece(xFrom, yFrom);
+        if(pieceSrc.movementPermitted(xFrom, yFrom, x, y)){
+           if((x == xFrom) && (y == yFrom)){
+                return false;
+            }
+            else{
+                boardCoordinates[x][y] = boardCoordinates[xFrom][yFrom];
+                boardCoordinates[x][y].setXY(x, y, boardCoordinates[xFrom][yFrom].color);
+                boardCoordinates[xFrom][yFrom] = null;
+                return true;
+            }
+        }
+        else
+            return false;
     }
 }

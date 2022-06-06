@@ -1,16 +1,8 @@
 package piochess.pio_chess;
 
-import java.io.File;
-
-import java.net.URL;
-
-import java.util.ResourceBundle;
-
 import javafx.collections.ObservableList;
-
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-
 import javafx.scene.Node;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
@@ -18,6 +10,10 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.paint.Color;
 import javafx.scene.paint.ImagePattern;
 import javafx.scene.shape.Rectangle;
+
+import java.io.File;
+import java.net.URL;
+import java.util.ResourceBundle;
 
 public class Game implements Initializable {
     boolean          moved = false;
@@ -101,14 +97,18 @@ public class Game implements Initializable {
                 System.out.println("null");
             }
 
-            boardClass.setPiece(x, y, xFrom, yFrom);
-            rectangle = (Rectangle) getNodeByRowColumnIndex(9 - yFrom, xFrom + 1, board);
+            if(boardClass.setPiece(x, y, xFrom, yFrom)){
+                rectangle = (Rectangle) getNodeByRowColumnIndex(9 - yFrom, xFrom + 1, board);
 
-            if (((xFrom % 2 == 0) && (yFrom % 2 == 1)) || ((xFrom % 2 == 1) && (yFrom % 2 == 0))) {
-                rectangle.setFill(Color.BLACK);
-            } else {
-                rectangle.setFill(Color.WHITE);
+                if (((xFrom % 2 == 0) && (yFrom % 2 == 1)) || ((xFrom % 2 == 1) && (yFrom % 2 == 0))) {
+                    rectangle.setFill(Color.BLACK);
+                } else {
+                    rectangle.setFill(Color.WHITE);
+                }
             }
+            else
+                System.out.println("Movement is not permitted");
+
 
             try {
                 file         = new File(boardClass.getPiece(x, y).iconPath(boardClass.getPiece(x, y).color.ordinal() % 2, 1));
