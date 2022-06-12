@@ -80,7 +80,7 @@ public class Board {
                 return false;
             }
         }
-        if(pieceSrc.movementPermitted(xFrom, yFrom, x, y)){
+        if(pieceSrc.movementPermitted(boardCoordinates, xFrom, yFrom, x, y)){
            if((x == xFrom) && (y == yFrom)){
                 return false;
             }
@@ -115,7 +115,7 @@ public class Board {
             for (int j = 0; j < 8; j++) {
                 if (boardCoordinates[i][j] != null) {
                     if (boardCoordinates[i][j].getColor() != king.getColor()) {
-                        if (boardCoordinates[i][j].movementPermitted(i, j, x, y)) {
+                        if (boardCoordinates[i][j].movementPermitted(boardCoordinates,i, j, x, y)) {
                             System.out.println("Check on " + king.color);
                             return true;
                         }
@@ -134,7 +134,7 @@ public class Board {
             for (int j = 0; j < 8; j++) {
                 if (boardCoordinates[i][j] != null) {
                     if (boardCoordinates[i][j].getColor() != king.getColor()) {
-                        if (boardCoordinates[i][j].movementPermitted(i, j, x, y)) {
+                        if (boardCoordinates[i][j].movementPermitted(boardCoordinates, i, j, x, y)) {
                             System.out.println("Check on " + king.color);
                             return true;
                         }

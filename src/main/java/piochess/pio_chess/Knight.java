@@ -10,7 +10,7 @@ public class Knight extends Piece {
      * Type-specific implementation of method movementPermitted from PieceMovement interface
      */
     @Override
-    public boolean movementPermitted(int xFrom, int yFrom, int xTo, int yTo) {
+    public boolean movementPermitted(Piece[][] boardCoordinates, int xFrom, int yFrom, int xTo, int yTo) {
         return ((xFrom == xTo - 2) && (yFrom == yTo - 1))
                || ((xFrom == xTo - 2) && (yFrom == yTo + 1))
                || ((xFrom == xTo + 2) && (yFrom == yTo + 1))
