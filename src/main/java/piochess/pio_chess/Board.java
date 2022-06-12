@@ -95,4 +95,28 @@ public class Board {
         else
             return false;
     }
+
+    /**
+     * @author Laura
+     * This method is used to verify if king is checked
+     */
+    public boolean isCheck(King king) {
+        int x = king.getX();
+        int y = king.getY();
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if (boardCoordinates[i][j] != null) {
+                    if (boardCoordinates[i][j].getColor() != king.getColor()) {
+                        if (boardCoordinates[i][j].movementPermitted(i, j, x, y)) {
+                            System.out.println("Check on " + king.color);
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+
 }

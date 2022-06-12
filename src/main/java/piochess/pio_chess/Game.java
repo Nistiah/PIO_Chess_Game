@@ -83,6 +83,7 @@ public class Game implements Initializable {
         ImagePattern imagePattern;
         Rectangle    rectangle;
 
+
         if (!moved) {
             xFrom = x;
             yFrom = y;
@@ -119,6 +120,12 @@ public class Game implements Initializable {
             } catch (NullPointerException ignored) {}
 
             moved = false;
+
+            //TODO: check if the game is over
+            //TODO: dont allow to move if the game is over
+            //TODO: dont allow to move if check
+            boardClass.isCheck(boardClass.whites.getKing());
+            boardClass.isCheck(boardClass.blacks.getKing());
         }
     }
 

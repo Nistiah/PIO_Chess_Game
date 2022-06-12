@@ -20,6 +20,10 @@ public class PieceSet {
     Piece      knight2;
     Piece      rook2;
 
+    public King getKing(){
+        return (King) king;
+    }
+
     /**
      * @author Laura
      * Constructor setting aggregate of Pawn objects
