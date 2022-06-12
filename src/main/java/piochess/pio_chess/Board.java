@@ -71,7 +71,6 @@ public class Board {
     /**
      * @author Laura
      * This is a skeleton-version method used to move the figures on boardCoordinates double array from one place into another
-     * TODO: implement possibility check here
      */
     public boolean setPiece(int x, int y, int xFrom, int yFrom) {
         Piece pieceSrc = getPiece(xFrom, yFrom);
@@ -85,12 +84,21 @@ public class Board {
            if((x == xFrom) && (y == yFrom)){
                 return false;
             }
-            else{
+            if(pieceSrc.getColor() == PieceSet.color.white){
+                if(isCheck(whites.getKing(),x,y)){
+                    return false;
+                }
+            }else{
+                if(isCheck(blacks.getKing(),x,y)){
+                    return false;
+                }
+            }
+
                 boardCoordinates[x][y] = boardCoordinates[xFrom][yFrom];
                 boardCoordinates[x][y].setXY(x, y, boardCoordinates[xFrom][yFrom].color);
                 boardCoordinates[xFrom][yFrom] = null;
                 return true;
-            }
+
         }
         else
             return false;
@@ -103,6 +111,25 @@ public class Board {
     public boolean isCheck(King king) {
         int x = king.getX();
         int y = king.getY();
+        for (int i = 0; i < 8; i++) {
+            for (int j = 0; j < 8; j++) {
+                if (boardCoordinates[i][j] != null) {
+                    if (boardCoordinates[i][j].getColor() != king.getColor()) {
+                        if (boardCoordinates[i][j].movementPermitted(i, j, x, y)) {
+                            System.out.println("Check on " + king.color);
+                            return true;
+                        }
+                    }
+                }
+            }
+        }
+        return false;
+    }
+    /**
+     * @author Laura
+     * This method is used to verify if king would be checked after certain move
+     */
+    public boolean isCheck(King king, int x, int y) {
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
                 if (boardCoordinates[i][j] != null) {

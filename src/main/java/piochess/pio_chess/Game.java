@@ -123,7 +123,6 @@ public class Game implements Initializable {
 
             //TODO: check if the game is over
             //TODO: dont allow to move if the game is over
-            //TODO: dont allow to move if check
             boardClass.isCheck(boardClass.whites.getKing());
             boardClass.isCheck(boardClass.blacks.getKing());
         }
