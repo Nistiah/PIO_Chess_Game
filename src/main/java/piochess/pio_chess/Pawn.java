@@ -1,8 +1,6 @@
 package piochess.pio_chess;
 
 public class Pawn extends Piece{
-    boolean isFirstMove = true;
-
     public Pawn(int x, int y, PieceSet.color color) {
         super(x, y, color);
     }
@@ -16,19 +14,20 @@ public class Pawn extends Piece{
         if(xFrom != xTo){
             return false;
         }
-        if(!isFirstMove){
-            return ((yFrom + 1 == yTo) && this.color == PieceSet.color.white) || ((yFrom - 1 == yTo) && this.color == PieceSet.color.black);
-        }
-        else{
-            if(((yFrom + 1 == yTo) && this.color == PieceSet.color.white) || ((yFrom - 1 == yTo) && this.color == PieceSet.color.black)){
+        if(yFrom == 7 && this.color == PieceSet.color.black){
+            if((yFrom - 2 == yTo) && boardCoordinates[xFrom][yFrom - 1] == null){
                 return true;
             }
-            else{
-                if(((yFrom + 2 == yTo) && this.color == PieceSet.color.white) && boardCoordinates[xFrom][yFrom + 1] == null){
-                    return true;
-                }
-                else return ((yFrom - 2 == yTo) && this.color == PieceSet.color.black) && boardCoordinates[xFrom][yFrom - 1] == null;
+            else return yFrom - 1 == yTo;
+        }
+        else if(yFrom == 2 && this.color == PieceSet.color.white){
+            if((yFrom + 2 == yTo) && boardCoordinates[xFrom][yFrom + 1] == null){
+                return true;
             }
+            else return yFrom + 1 == yTo;
+        }
+        else{
+            return ((yFrom + 1 == yTo) && this.color == PieceSet.color.white) || ((yFrom - 1 == yTo) && this.color == PieceSet.color.black);
         }
     }
 }
