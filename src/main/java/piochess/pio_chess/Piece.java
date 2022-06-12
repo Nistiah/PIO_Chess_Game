@@ -89,4 +89,8 @@ public class Piece implements PieceMovement {
     public int getY() {
         return y;
     }
+
+    public PieceSet.color getColor() {
+        return color;
+    }
 }

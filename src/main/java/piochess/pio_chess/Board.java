@@ -75,6 +75,12 @@ public class Board {
      */
     public boolean setPiece(int x, int y, int xFrom, int yFrom) {
         Piece pieceSrc = getPiece(xFrom, yFrom);
+        Piece pieceDst = getPiece(x, y);
+        if(pieceDst != null){
+            if(pieceSrc.getColor() == pieceDst.getColor()){
+                return false;
+            }
+        }
         if(pieceSrc.movementPermitted(xFrom, yFrom, x, y)){
            if((x == xFrom) && (y == yFrom)){
                 return false;
