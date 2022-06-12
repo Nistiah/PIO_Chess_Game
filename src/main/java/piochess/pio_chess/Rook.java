@@ -9,8 +9,41 @@ public class Rook extends Piece {
      * @author Gosia
      * Type-specific implementation of method movementPermitted from PieceMovement interface
      */
+
     @Override
-    public boolean movementPermitted(int xFrom, int yFrom, int xTo, int yTo) {
-        return ((xFrom == xTo) && (yFrom != yTo)) || ((yFrom == yTo) && (xFrom != xTo));
+    public boolean movementPermitted(Piece[][] boardCoordinates, int xFrom, int yFrom, int xTo, int yTo) {
+        if((xFrom != xTo) && (yFrom != yTo)){
+            return false;
+        }
+        int offset;
+        if(xFrom != xTo){
+            if(xFrom < xTo){
+                offset = 1;
+            }
+            else{
+                offset = -1;
+            }
+
+            for(int x = xFrom + offset; x != xTo; x += offset){
+                if(boardCoordinates[x][yFrom] != null){
+                    return false;
+                }
+            }
+        }
+
+        if(yFrom != yTo){
+            if(yFrom < yTo){
+                offset = 1;
+            }
+            else{
+                offset = -1;
+            }
+            for(int x = yFrom + offset; x != yTo; x += offset){
+                if(boardCoordinates[xFrom][x] != null){
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 }

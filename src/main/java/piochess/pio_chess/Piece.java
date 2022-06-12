@@ -68,7 +68,7 @@ public class Piece implements PieceMovement {
     }
 
     @Override
-    public boolean movementPermitted(int xFrom, int yFrom, int xTo, int yTo) {
+    public boolean movementPermitted(Piece[][] boardCoordinates, int xFrom, int yFrom, int xTo, int yTo) {
         return false;
     }
 

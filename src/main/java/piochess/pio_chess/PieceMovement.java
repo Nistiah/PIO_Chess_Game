@@ -6,5 +6,5 @@ public interface PieceMovement {
      * @author Laura
      * method created in order to verify movement possibility
      */
-    public boolean movementPermitted(int xFrom, int yFrom, int xTo, int yTo);
+    public boolean movementPermitted(Piece[][] boardCoordinates, int xFrom, int yFrom, int xTo, int yTo);
 }
