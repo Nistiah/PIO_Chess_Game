@@ -8,6 +8,7 @@ public class Board {
     private final int MAX_X_COORD = 7;
     private final int MIN_Y_COORD = 1;
     private final int MAX_Y_COORD = 8;
+    private int turn = 1; //1 - white, -1 - black
 
     /**
      * @author Mateusz
@@ -68,6 +69,11 @@ public class Board {
         return boardCoordinates[x][y];
     }
 
+    public int getTurn()
+    {
+        return turn;
+    }
+
     /**
      * @author Laura
      * This is a skeleton-version method used to move the figures on boardCoordinates double array from one place into another
@@ -75,6 +81,14 @@ public class Board {
     public boolean setPiece(int x, int y, int xFrom, int yFrom) {
         Piece pieceSrc = getPiece(xFrom, yFrom);
         Piece pieceDst = getPiece(x, y);
+        if(pieceSrc.getColor() == PieceSet.color.white && turn != 1){
+            System.out.println("It is not your turn");
+            return false;
+        }
+        else if(pieceSrc.getColor() == PieceSet.color.black && turn != -1){
+            System.out.println("It is not your turn");
+            return false;
+        }
         if(pieceDst != null){
             if(pieceSrc.getColor() == pieceDst.getColor()){
                 return false;
@@ -97,6 +111,7 @@ public class Board {
                 boardCoordinates[x][y] = boardCoordinates[xFrom][yFrom];
                 boardCoordinates[x][y].setXY(x, y, boardCoordinates[xFrom][yFrom].color);
                 boardCoordinates[xFrom][yFrom] = null;
+                turn *= -1;
                 return true;
 
         }

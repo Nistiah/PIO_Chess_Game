@@ -4,6 +4,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
@@ -19,6 +20,10 @@ public class Game implements Initializable {
     boolean          moved = false;
     @FXML
     private GridPane board;
+    @FXML
+    public TextField currentPlayerBaner;
+    @FXML
+    public TextField  movementPermittedBaner;
     private Board    boardClass;
     private int      xFrom;
     private int      yFrom;
@@ -35,6 +40,8 @@ public class Game implements Initializable {
         Image        image;
         ImagePattern imagePattern;
         Rectangle    rectangle;
+
+        currentPlayerBaner.setText("Current move: Whites");
 
         for (int x = 0; x < 8; x++) {
             for (int y = 1; y < 3; y++) {
@@ -83,7 +90,8 @@ public class Game implements Initializable {
         ImagePattern imagePattern;
         Rectangle    rectangle;
 
-
+        movementPermittedBaner.setText("");
+        setCurrentPlayerBaner(boardClass.getTurn());
         if (!moved) {
             xFrom = x;
             yFrom = y;
@@ -102,13 +110,13 @@ public class Game implements Initializable {
                 rectangle = (Rectangle) getNodeByRowColumnIndex(9 - yFrom, xFrom + 1, board);
 
                 if (((xFrom % 2 == 0) && (yFrom % 2 == 1)) || ((xFrom % 2 == 1) && (yFrom % 2 == 0))) {
-                    rectangle.setFill(Color.BLACK);
+                    rectangle.setFill(Color.rgb(22,22,22));
                 } else {
                     rectangle.setFill(Color.WHITE);
                 }
             }
             else
-                System.out.println("Movement is not permitted");
+                movementPermittedBaner.setText("Movement is not permitted");
 
 
             try {
@@ -120,6 +128,7 @@ public class Game implements Initializable {
             } catch (NullPointerException ignored) {}
 
             moved = false;
+            setCurrentPlayerBaner(boardClass.getTurn());
 
             //TODO: check if the game is over
             //TODO: dont allow to move if the game is over
@@ -163,5 +172,17 @@ public class Game implements Initializable {
         }
 
         return result;
+    }
+
+    public void setCurrentPlayerBaner(int turn)
+    {
+        if(turn == 1)
+        {
+            currentPlayerBaner.setText("Current move: Whites");
+        }
+        else
+        {
+            currentPlayerBaner.setText("Current move: Blacks");
+        }
     }
 }
