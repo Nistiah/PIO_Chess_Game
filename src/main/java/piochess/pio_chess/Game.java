@@ -41,6 +41,8 @@ public class Game implements Initializable {
         ImagePattern imagePattern;
         Rectangle    rectangle;
 
+        currentPlayerBaner.setText("Current move: Whites");
+
         for (int x = 0; x < 8; x++) {
             for (int y = 1; y < 3; y++) {
                 file         = new File(boardClass.getPiece(x, y).iconPath(1, 0));
@@ -89,6 +91,7 @@ public class Game implements Initializable {
         Rectangle    rectangle;
 
         movementPermittedBaner.setText("");
+        setCurrentPlayerBaner(boardClass.getTurn());
         if (!moved) {
             xFrom = x;
             yFrom = y;
@@ -125,6 +128,7 @@ public class Game implements Initializable {
             } catch (NullPointerException ignored) {}
 
             moved = false;
+            setCurrentPlayerBaner(boardClass.getTurn());
 
             //TODO: check if the game is over
             //TODO: dont allow to move if the game is over
@@ -168,5 +172,17 @@ public class Game implements Initializable {
         }
 
         return result;
+    }
+
+    public void setCurrentPlayerBaner(int turn)
+    {
+        if(turn == 1)
+        {
+            currentPlayerBaner.setText("Current move: Whites");
+        }
+        else
+        {
+            currentPlayerBaner.setText("Current move: Blacks");
+        }
     }
 }
