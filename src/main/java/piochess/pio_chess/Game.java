@@ -4,6 +4,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
@@ -19,6 +20,10 @@ public class Game implements Initializable {
     boolean          moved = false;
     @FXML
     private GridPane board;
+    @FXML
+    public TextField currentPlayerBaner;
+    @FXML
+    public TextField  movementPermittedBaner;
     private Board    boardClass;
     private int      xFrom;
     private int      yFrom;
@@ -83,7 +88,7 @@ public class Game implements Initializable {
         ImagePattern imagePattern;
         Rectangle    rectangle;
 
-
+        movementPermittedBaner.setText("");
         if (!moved) {
             xFrom = x;
             yFrom = y;
@@ -108,7 +113,7 @@ public class Game implements Initializable {
                 }
             }
             else
-                System.out.println("Movement is not permitted");
+                movementPermittedBaner.setText("Movement is not permitted");
 
 
             try {
