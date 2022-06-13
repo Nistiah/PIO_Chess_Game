@@ -110,7 +110,7 @@ public class Game implements Initializable {
                 rectangle = (Rectangle) getNodeByRowColumnIndex(9 - yFrom, xFrom + 1, board);
 
                 if (((xFrom % 2 == 0) && (yFrom % 2 == 1)) || ((xFrom % 2 == 1) && (yFrom % 2 == 0))) {
-                    rectangle.setFill(Color.BLACK);
+                    rectangle.setFill(Color.rgb(22,22,22));
                 } else {
                     rectangle.setFill(Color.WHITE);
                 }
