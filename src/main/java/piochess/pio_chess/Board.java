@@ -95,7 +95,7 @@ public class Board {
             }
         }
         if(pieceSrc.movementPermitted(boardCoordinates, xFrom, yFrom, x, y)){
-           if((x == xFrom) && (y == yFrom)){
+            if((x == xFrom) && (y == yFrom)){
                 return false;
             }
             if(pieceSrc.getColor() == PieceSet.color.white){
@@ -108,11 +108,22 @@ public class Board {
                 }
             }
 
-                boardCoordinates[x][y] = boardCoordinates[xFrom][yFrom];
-                boardCoordinates[x][y].setXY(x, y, boardCoordinates[xFrom][yFrom].color);
-                boardCoordinates[xFrom][yFrom] = null;
-                turn *= -1;
-                return true;
+            if(pieceSrc.getColor() == PieceSet.color.white){
+                if(isCheckMate(whites.getKing())){
+                    return false;
+                }
+            }
+            else if(pieceSrc.getColor() == PieceSet.color.black){
+                if(isCheckMate(blacks.getKing())){
+                    return false;
+                }
+            }
+
+            boardCoordinates[x][y] = boardCoordinates[xFrom][yFrom];
+            boardCoordinates[x][y].setXY(x, y, boardCoordinates[xFrom][yFrom].color);
+            boardCoordinates[xFrom][yFrom] = null;
+            turn *= -1;
+            return true;
 
         }
         else
@@ -158,6 +169,31 @@ public class Board {
             }
         }
         return false;
+    }
+
+    public boolean isCheckMate(King king){
+        if(!isCheck(king)){
+            return false;
+        }
+        for(int i = 0; i < 8; i++){
+            for(int j = 0; j < 8; j++){
+                if(boardCoordinates[i][j] != null){
+                    if(boardCoordinates[i][j].getColor() == king.getColor()){
+                        for(int x = 0; x < 8; x++){
+                            for(int y = 0; y < 8; y++){
+                                if(boardCoordinates[i][j].movementPermitted(boardCoordinates, i, j, x, y)){
+                                    if(!isCheck(king)){
+                                        return false;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        return true;
     }
 
 
