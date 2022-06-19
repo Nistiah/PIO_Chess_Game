@@ -97,8 +97,13 @@ public class Game implements Initializable {
             yFrom = y;
             moved = true;
         } else {
-            System.out.println(xFrom + " " + yFrom + " " + x + " " + y);
-            System.out.println(boardClass.getPiece(xFrom, yFrom).getClass().getName());
+//            System.out.println(xFrom + " " + yFrom + " " + x + " " + y);
+//            System.out.println(boardClass.getPiece(xFrom, yFrom).getClass().getName());
+//
+            if(xFrom==x&&yFrom==y){
+                moved=false;
+                return;
+            }
 
             try {
                 System.out.println(boardClass.getPiece(x, y).getClass().getName());
