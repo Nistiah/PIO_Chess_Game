@@ -112,6 +112,12 @@ public class Game implements Initializable {
             }
 
             if(boardClass.setPiece(x, y, xFrom, yFrom)){
+                if(boardClass.getTurn() == 1 && boardClass.isCheck(boardClass.whites.getKing())){
+                    movementPermittedBaner.setText("Check on whites");
+                }
+                else if(boardClass.getTurn() == -1 && boardClass.isCheck(boardClass.blacks.getKing())){
+                    movementPermittedBaner.setText("Check on blacks");
+                }
                 rectangle = (Rectangle) getNodeByRowColumnIndex(9 - yFrom, xFrom + 1, board);
 
                 if (((xFrom % 2 == 0) && (yFrom % 2 == 1)) || ((xFrom % 2 == 1) && (yFrom % 2 == 0))) {
@@ -120,8 +126,24 @@ public class Game implements Initializable {
                     rectangle.setFill(Color.WHITE);
                 }
             }
+            else if(boardClass.isCheck(boardClass.whites.getKing(), x, y) && boardClass.getTurn() == 1){
+                movementPermittedBaner.setText("Movement is not permitted - white king would be checked");
+            }
+            else if(boardClass.isCheck(boardClass.blacks.getKing(), x, y) && boardClass.getTurn() == -1){
+                movementPermittedBaner.setText("Movement is not permitted - black king would be checked");
+            }
             else
                 movementPermittedBaner.setText("Movement is not permitted");
+
+
+
+            if(boardClass.isCheckMate(boardClass.whites.getKing())){
+                movementPermittedBaner.setText("Check mate on whites");
+            }
+
+            if(boardClass.isCheckMate(boardClass.blacks.getKing())){
+                movementPermittedBaner.setText("Check mate on blacks");
+            }
 
 
             try {
