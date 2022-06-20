@@ -98,26 +98,17 @@ public class Board {
             if((x == xFrom) && (y == yFrom)){
                 return false;
             }
-            if(pieceSrc.getColor() == PieceSet.color.white){
-                if(isCheck(whites.getKing(),x,y)){
-                    return false;
-                }
-            }else{
-                if(isCheck(blacks.getKing(),x,y)){
-                    return false;
-                }
-            }
 
-            if(pieceSrc.getColor() == PieceSet.color.white){
-                if(isCheckMate(whites.getKing())){
-                    return false;
-                }
-            }
-            else if(pieceSrc.getColor() == PieceSet.color.black){
-                if(isCheckMate(blacks.getKing())){
-                    return false;
-                }
-            }
+//            if(pieceSrc.getColor() == PieceSet.color.white){
+//                if(isCheckMate(whites.getKing())){
+//                    return false;
+//                }
+//            }
+//            else if(pieceSrc.getColor() == PieceSet.color.black){
+//                if(isCheckMate(blacks.getKing())){
+//                    return false;
+//                }
+//            }
 
             boardCoordinates[x][y] = boardCoordinates[xFrom][yFrom];
             boardCoordinates[x][y].setXY(x, y, boardCoordinates[xFrom][yFrom].color);
@@ -142,7 +133,7 @@ public class Board {
                 if (boardCoordinates[i][j] != null) {
                     if (boardCoordinates[i][j].getColor() != king.getColor()) {
                         if (boardCoordinates[i][j].movementPermitted(boardCoordinates,i, j, x, y)) {
-                            System.out.println("Check on " + king.color);
+                            System.out.println("11Check on " + king.color + "from "+i+" "+j+" to"+x+" "+y);
                             return true;
                         }
                     }
@@ -161,7 +152,7 @@ public class Board {
                 if (boardCoordinates[i][j] != null) {
                     if (boardCoordinates[i][j].getColor() != king.getColor()) {
                         if (boardCoordinates[i][j].movementPermitted(boardCoordinates, i, j, x, y)) {
-                            System.out.println("Check on " + king.color);
+                            System.out.println("Check on " + king.color + "from "+i+" "+j+" to"+x+" "+y);
                             return true;
                         }
                     }

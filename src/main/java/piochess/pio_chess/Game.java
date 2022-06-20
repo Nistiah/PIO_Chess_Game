@@ -97,27 +97,46 @@ public class Game implements Initializable {
             yFrom = y;
             moved = true;
         } else {
-//            System.out.println(xFrom + " " + yFrom + " " + x + " " + y);
-//            System.out.println(boardClass.getPiece(xFrom, yFrom).getClass().getName());
-//
+
             if(xFrom==x&&yFrom==y){
                 moved=false;
                 return;
             }
-
             try {
-                System.out.println(boardClass.getPiece(x, y).getClass().getName());
-            } catch (NullPointerException e) {
-                System.out.println("null");
+                if ((boardClass.getPiece(xFrom, yFrom).color == PieceSet.color.white && boardClass.getTurn() != 1) ||
+                        (boardClass.getPiece(xFrom, yFrom).color == PieceSet.color.black && boardClass.getTurn() != -1)) {
+                    movementPermittedBaner.setText("Not your turn");
+                    moved = false;
+                    return;
+                }
+            }catch(NullPointerException exception){
+                movementPermittedBaner.setText("Nothing here");
+                moved=false;
+                return;
             }
 
+
+//            if(boardClass.isCheck(boardClass.whites.getKing(), x, y) && boardClass.getTurn() == 1){
+//                movementPermittedBaner.setText("Movement is not permitted - white king would be checked");
+////                moved=false;
+////                return;
+//            }
+//            if(boardClass.isCheck(boardClass.blacks.getKing(), x, y) && boardClass.getTurn() == -1){
+//                movementPermittedBaner.setText("Movement is not permitted - black king would be checked");
+////                moved=false;
+////                return;
+//            }
+
+
+
             if(boardClass.setPiece(x, y, xFrom, yFrom)){
-                if(boardClass.getTurn() == 1 && boardClass.isCheck(boardClass.whites.getKing())){
-                    movementPermittedBaner.setText("Check on whites");
-                }
-                else if(boardClass.getTurn() == -1 && boardClass.isCheck(boardClass.blacks.getKing())){
-                    movementPermittedBaner.setText("Check on blacks");
-                }
+
+//                if(boardClass.getTurn() == 1 && boardClass.isCheck(boardClass.whites.getKing(),x,y)){
+//                    movementPermittedBaner.setText("Check on whites");
+//                }
+//                else if(boardClass.getTurn() == -1 && boardClass.isCheck(boardClass.blacks.getKing(),x,y)){
+//                    movementPermittedBaner.setText("Check on blacks");
+//                }
                 rectangle = (Rectangle) getNodeByRowColumnIndex(9 - yFrom, xFrom + 1, board);
 
                 if (((xFrom % 2 == 0) && (yFrom % 2 == 1)) || ((xFrom % 2 == 1) && (yFrom % 2 == 0))) {
@@ -125,24 +144,6 @@ public class Game implements Initializable {
                 } else {
                     rectangle.setFill(Color.WHITE);
                 }
-            }
-            else if(boardClass.isCheck(boardClass.whites.getKing(), x, y) && boardClass.getTurn() == 1){
-                movementPermittedBaner.setText("Movement is not permitted - white king would be checked");
-            }
-            else if(boardClass.isCheck(boardClass.blacks.getKing(), x, y) && boardClass.getTurn() == -1){
-                movementPermittedBaner.setText("Movement is not permitted - black king would be checked");
-            }
-            else
-                movementPermittedBaner.setText("Movement is not permitted");
-
-
-
-            if(boardClass.isCheckMate(boardClass.whites.getKing())){
-                movementPermittedBaner.setText("Check mate on whites");
-            }
-
-            if(boardClass.isCheckMate(boardClass.blacks.getKing())){
-                movementPermittedBaner.setText("Check mate on blacks");
             }
 
 
@@ -157,10 +158,8 @@ public class Game implements Initializable {
             moved = false;
             setCurrentPlayerBaner(boardClass.getTurn());
 
-            //TODO: check if the game is over
-            //TODO: dont allow to move if the game is over
-            boardClass.isCheck(boardClass.whites.getKing());
-            boardClass.isCheck(boardClass.blacks.getKing());
+//            boardClass.isCheck(boardClass.whites.getKing());
+//            boardClass.isCheck(boardClass.blacks.getKing());
         }
     }
 
