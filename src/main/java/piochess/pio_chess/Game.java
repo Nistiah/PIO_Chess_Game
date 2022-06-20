@@ -115,28 +115,8 @@ public class Game implements Initializable {
                 return;
             }
 
-
-//            if(boardClass.isCheck(boardClass.whites.getKing(), x, y) && boardClass.getTurn() == 1){
-//                movementPermittedBaner.setText("Movement is not permitted - white king would be checked");
-////                moved=false;
-////                return;
-//            }
-//            if(boardClass.isCheck(boardClass.blacks.getKing(), x, y) && boardClass.getTurn() == -1){
-//                movementPermittedBaner.setText("Movement is not permitted - black king would be checked");
-////                moved=false;
-////                return;
-//            }
-
-
-
             if(boardClass.setPiece(x, y, xFrom, yFrom)){
 
-//                if(boardClass.getTurn() == 1 && boardClass.isCheck(boardClass.whites.getKing(),x,y)){
-//                    movementPermittedBaner.setText("Check on whites");
-//                }
-//                else if(boardClass.getTurn() == -1 && boardClass.isCheck(boardClass.blacks.getKing(),x,y)){
-//                    movementPermittedBaner.setText("Check on blacks");
-//                }
                 rectangle = (Rectangle) getNodeByRowColumnIndex(9 - yFrom, xFrom + 1, board);
 
                 if (((xFrom % 2 == 0) && (yFrom % 2 == 1)) || ((xFrom % 2 == 1) && (yFrom % 2 == 0))) {
@@ -144,8 +124,11 @@ public class Game implements Initializable {
                 } else {
                     rectangle.setFill(Color.WHITE);
                 }
+            }else{
+                movementPermittedBaner.setText("movement not permited!");
+                moved=false;
+                return;
             }
-
 
             try {
                 file         = new File(boardClass.getPiece(x, y).iconPath(boardClass.getPiece(x, y).color.ordinal() % 2, 1));
@@ -158,8 +141,6 @@ public class Game implements Initializable {
             moved = false;
             setCurrentPlayerBaner(boardClass.getTurn());
 
-//            boardClass.isCheck(boardClass.whites.getKing());
-//            boardClass.isCheck(boardClass.blacks.getKing());
         }
     }
 
@@ -173,9 +154,7 @@ public class Game implements Initializable {
         int    x    = Integer.parseInt(xs);
         String ys   = event.getSource().toString().substring(12, 13);
         int    y    = Integer.parseInt(ys);
-        Piece  temp = boardClass.getBox(x, y);
 
-//        System.out.println(temp);
     }
 
     /**
